@@ -25,3 +25,5 @@ SELECT \* FROM `degrees` WHERE `level` = 'magistrale';
 SELECT COUNT(`id`) FROM `departments`;
 
 ## Es. 8
+
+SELECT \* FROM `teachers` WHERE `phone` IS NULL;
