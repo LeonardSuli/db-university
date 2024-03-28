@@ -22,4 +22,6 @@ SELECT \* FROM `degrees` WHERE `level` = 'magistrale';
 
 ## Es. 7
 
+SELECT COUNT(`id`) FROM `departments`;
+
 ## Es. 8
