@@ -17,3 +17,9 @@ GROUP BY `office_address`;
 SELECT `exam_id`, AVG(`vote`) AS 'media_voti'
 FROM `exam_student`
 GROUP BY `exam_id`;
+
+## 4. Contare quanti corsi di laurea ci sono per ogni dipartimento
+
+SELECT COUNT(\*) AS 'total_courses', `department_id`
+FROM `degrees`
+GROUP BY `department_id`;
