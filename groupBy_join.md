@@ -23,3 +23,17 @@ GROUP BY `exam_id`;
 SELECT COUNT(\*) AS 'total_courses', `department_id`
 FROM `degrees`
 GROUP BY `department_id`;
+
+#
+
+#
+
+# Ex Joins
+
+## 1. Selezionare tutti gli studenti iscritti al Corso di Laurea in Economia
+
+SELECT `students`.`*`, `degrees`.`name` AS 'degree_name'
+FROM `students`
+JOIN `degrees`
+ON `students`.`degree_id` = `degrees`.`id`
+WHERE `degrees`.`name` = 'Corso di Laurea in Economia';
