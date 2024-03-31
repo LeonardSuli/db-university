@@ -30,10 +30,19 @@ GROUP BY `department_id`;
 
 # Ex Joins
 
-## 1. Selezionare tutti gli studenti iscritti al Corso di Laurea in Economia
+## 1. Selezionare tutti gli studenti iscritti al Corso di Laurea in Economia (68)
 
 SELECT `students`.`*`, `degrees`.`name` AS 'degree_name'
 FROM `students`
 JOIN `degrees`
 ON `students`.`degree_id` = `degrees`.`id`
 WHERE `degrees`.`name` = 'Corso di Laurea in Economia';
+
+## 2. Selezionare tutti i Corsi di Laurea Magistrale del Dipartimento di Neuroscienze (1)
+
+SELECT `degrees`.`*`, `departments`.`name` AS 'department_name'
+FROM `degrees`
+JOIN `departments`
+ON `degrees`.`department_id` = `departments`.`id`
+WHERE `departments`.`name` = 'Dipartimento di Neuroscienze'
+AND `degrees`.`level` = 'magistrale';
